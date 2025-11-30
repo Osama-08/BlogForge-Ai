@@ -95,7 +95,7 @@ export default async function AdminDashboardPage() {
                     <CardContent>
                         {pendingPosts.length > 0 ? (
                             <div className="space-y-4">
-                                {pendingPosts.map((post) => (
+                                {pendingPosts.map((post: any) => (
                                     <div key={post.id} className="flex items-center justify-between border-b pb-4 last:border-0 last:pb-0">
                                         <div className="space-y-1">
                                             <p className="text-sm font-medium leading-none">{post.title}</p>
