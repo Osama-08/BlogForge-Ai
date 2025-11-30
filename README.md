@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BlogForge AI
 
-## Getting Started
+BlogForge AI is a modern, full-stack blog platform powered by Next.js 15 and AI. It empowers writers with intelligent tools for content generation, SEO optimization, and idea brainstorming, all wrapped in a sleek, responsive interface.
 
-First, run the development server:
+![BlogForge AI Mission](/about-mission.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   **AI-Powered Writing**: Generate full blog posts and outlines using advanced AI (OpenAI/Gemini).
+-   **SEO Assistant**: Real-time SEO analysis and metadata generation to boost visibility.
+-   **Modern Editor**: Rich text editor with media support for crafting engaging stories.
+-   **Role-Based Access**: Secure authentication (NextAuth) with User and Admin roles.
+-   **Admin Dashboard**: Comprehensive dashboard for managing posts, users, and analytics.
+-   **Media Management**: Seamless image uploads via UploadThing.
+-   **Responsive Design**: Built with Tailwind CSS and Shadcn/ui for a premium experience on any device.
+-   **Dark Mode**: Fully supported dark/light themes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+-   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+-   **Language**: TypeScript
+-   **Database**: PostgreSQL (via [Prisma ORM](https://www.prisma.io/))
+-   **Auth**: [NextAuth.js](https://next-auth.js.org/) (v5 compatible)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [Shadcn/ui](https://ui.shadcn.com/)
+-   **AI**: OpenAI API / Google Gemini
+-   **Storage**: [UploadThing](https://uploadthing.com/)
 
-## Learn More
+## 🏁 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   Node.js 18+
+-   PostgreSQL database
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1.  **Clone the repository:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    git clone https://github.com/yourusername/blogforge-ai.git
+    cd blogforge-ai
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+3.  **Set up environment variables:**
+
+    Create a `.env` file in the root directory and add the following:
+
+    ```env
+    DATABASE_URL="postgresql://..."
+    NEXTAUTH_SECRET="your-secret"
+    NEXTAUTH_URL="http://localhost:3000"
+
+    # OAuth Providers
+    GOOGLE_CLIENT_ID=""
+    GOOGLE_CLIENT_SECRET=""
+    GITHUB_ID=""
+    GITHUB_SECRET=""
+
+    # AI Services
+    OPENAI_API_KEY=""
+    GOOGLE_API_KEY=""
+
+    # UploadThing
+    UPLOADTHING_SECRET=""
+    UPLOADTHING_APP_ID=""
+    ```
+
+4.  **Initialize the database:**
+
+    ```bash
+    npx prisma generate
+    npx prisma db push
+    ```
+
+5.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 📜 Scripts
+
+-   `npm run dev`: Start the development server.
+-   `npm run build`: Build the application for production.
+-   `npm start`: Start the production server.
+-   `npm run lint`: Run ESLint.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License.
