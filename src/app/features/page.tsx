@@ -58,7 +58,7 @@ export default function FeaturesPage() {
                     </div>
                     <h3 className="text-xl font-bold">Analytics Dashboard</h3>
                     <p className="text-muted-foreground">
-                        Track your content's performance with detailed analytics on views, engagement, and growth.
+                        Track your content&apos;s performance with detailed analytics on views, engagement, and growth.
                     </p>
                 </div>
                 <div className="p-6 border rounded-2xl bg-card space-y-4">

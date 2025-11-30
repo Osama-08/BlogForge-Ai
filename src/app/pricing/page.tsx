@@ -9,7 +9,7 @@ export default function PricingPage() {
             <section className="text-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight lg:text-6xl">Simple, Transparent Pricing</h1>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                    Choose the plan that's right for you. No hidden fees. Cancel anytime.
+                    Choose the plan that&apos;s right for you. No hidden fees. Cancel anytime.
                 </p>
             </section>
 

@@ -43,7 +43,7 @@ export default function HelpPage() {
             </div>
 
             <div className="text-center pt-8">
-                <p className="text-muted-foreground mb-4">Can't find what you're looking for?</p>
+                <p className="text-muted-foreground mb-4">Can&apos;t find what you&apos;re looking for?</p>
                 <Button asChild><Link href="/contact">Contact Support</Link></Button>
             </div>
         </div>

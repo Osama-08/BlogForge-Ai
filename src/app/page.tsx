@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/lib/auth"
 import { prisma } from "@/lib/prisma"
@@ -79,11 +80,12 @@ export default async function Home() {
             {posts.map((post) => (
               <article key={post.id} className="group relative flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition hover:shadow-md">
                 {post.featuredImage && (
-                  <div className="aspect-video w-full overflow-hidden bg-muted">
-                    <img
+                  <div className="aspect-video w-full overflow-hidden bg-muted relative">
+                    <Image
                       src={post.featuredImage}
                       alt={post.title}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 )}
@@ -106,7 +108,7 @@ export default async function Home() {
                   <div className="mt-4 flex items-center justify-between text-sm">
                     <div className="flex items-center gap-2">
                       {post.author.image && (
-                        <img src={post.author.image} alt={post.author.name || "Author"} className="h-6 w-6 rounded-full" />
+                        <Image src={post.author.image} alt={post.author.name || "Author"} width={24} height={24} className="rounded-full" />
                       )}
                       <span className="text-muted-foreground">{post.author.name}</span>
                     </div>

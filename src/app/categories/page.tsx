@@ -21,7 +21,7 @@ export default async function CategoriesPage() {
                 </h1>
                 <p className="text-lg text-muted-foreground max-w-2xl">
                     Discover stories, tutorials, and insights across a variety of topics.
-                    Find exactly what you're looking for.
+                    Find exactly what you&apos;re looking for.
                 </p>
             </div>
 

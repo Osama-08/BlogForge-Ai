@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import { prisma } from "@/lib/prisma"
 import { format } from "date-fns"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 type BlogPostPageProps = {
@@ -40,9 +41,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
       </div>
       {post.featuredImage ? (
-        <div className="overflow-hidden rounded-3xl border">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={post.featuredImage} alt={post.title} className="h-[360px] w-full object-cover" />
+        <div className="relative h-[360px] w-full overflow-hidden rounded-3xl border">
+          <Image
+            src={post.featuredImage}
+            alt={post.title}
+            fill
+            className="object-cover"
+          />
         </div>
       ) : null}
       <div className="prose prose-neutral dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -54,4 +59,3 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </article>
   )
 }
-

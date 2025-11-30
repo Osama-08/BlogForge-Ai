@@ -10,7 +10,7 @@ export default function ContactPage() {
             <section className="text-center space-y-4">
                 <h1 className="text-4xl font-bold tracking-tight lg:text-6xl">Get in Touch</h1>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                    Have questions about BlogForge AI? We're here to help. Chat with our team.
+                    Have questions about BlogForge AI? We&apos;re here to help. Chat with our team.
                 </p>
             </section>
 
