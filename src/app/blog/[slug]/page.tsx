@@ -33,7 +33,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         <h1 className="text-4xl font-bold tracking-tight">{post.title}</h1>
         <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-muted-foreground">
           <span>By {post.author?.name ?? "Unknown author"}</span>
-          {post.tags.map((tag) => (
+          {post.tags.map((tag: { id: string; name: string }) => (
             <span key={tag.id} className="rounded-full border px-3 py-0.5 text-xs">
               {tag.name}
             </span>
