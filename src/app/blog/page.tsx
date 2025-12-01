@@ -56,7 +56,7 @@ export default async function BlogPage() {
 
       {posts.length ? (
         <div className="grid gap-8 md:grid-cols-2">
-          {posts.map((post) => (
+          {posts.map((post: any) => (
             <article key={post.id} className="rounded-2xl border bg-card p-6 shadow-sm transition hover:shadow-lg">
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <span>{format(post.createdAt, "MMM d, yyyy")}</span>
@@ -75,7 +75,7 @@ export default async function BlogPage() {
               <p className="mt-3 line-clamp-4 text-sm text-muted-foreground">{post.excerpt ?? post.content.slice(0, 180)}</p>
               <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                 <span>By {post.author?.name ?? "Unknown author"}</span>
-                {post.tags.map((tag) => (
+                {post.tags.map((tag: { id: string; name: string }) => (
                   <span key={tag.id} className="rounded-full border px-2 py-0.5 text-[11px]">
                     {tag.name}
                   </span>

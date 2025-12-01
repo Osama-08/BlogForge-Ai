@@ -160,7 +160,7 @@ export function PostForm({ post }: Props) {
                                                 </SelectTrigger>
                                             </FormControl>
                                             <SelectContent>
-                                                {categories.map((category) => (
+                                                {categories.map((category: Category) => (
                                                     <SelectItem key={category.id} value={category.id}>
                                                         {category.name}
                                                     </SelectItem>

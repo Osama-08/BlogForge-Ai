@@ -77,7 +77,7 @@ export default async function Home() {
         </div>
         {posts.length ? (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
+            {posts.map((post: any) => (
               <article key={post.id} className="group relative flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition hover:shadow-md">
                 {post.featuredImage && (
                   <div className="aspect-video w-full overflow-hidden bg-muted relative">

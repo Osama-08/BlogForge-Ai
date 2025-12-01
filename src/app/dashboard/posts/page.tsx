@@ -53,7 +53,7 @@ export default async function PostsPage() {
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        {posts.map((post) => (
+                        {posts.map((post: any) => (
                             <TableRow key={post.id}>
                                 <TableCell className="font-medium">{post.title}</TableCell>
                                 <TableCell>
